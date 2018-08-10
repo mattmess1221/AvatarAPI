@@ -40,6 +40,13 @@ sourceSets {
 }
 configurations {
     coreCompile.transitive = false
+
+    forgeGradleMcDeps {
+        exclude group: 'org.scala-lang'
+        exclude group: 'org.scala-lang.plugins'
+        exclude group: 'org.scala-lang.modules'
+        exclude group: 'com.typesafe.akka'
+    }
 }
 
 repositories {
