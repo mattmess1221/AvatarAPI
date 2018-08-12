@@ -17,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.At.Shift;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,6 +41,14 @@ public class MixinNetworkPlayerInfo implements INetworkPlayerInfo {
         return Optional.ofNullable(customTextures.get(TextureType.from(type)))
                 .map(TextureData::getLocation)
                 .orElse(playerTextures.get(type));
+    }
+
+    @Inject(method = "getSkinType", at = @At("RETURN"), cancellable = true)
+    private void getTextureModel(CallbackInfoReturnable<String> cir) {
+        Optional.ofNullable(customTextures.get(TextureType.SKIN))
+                .map(TextureData::getProfile)
+                .map(p -> p.getMetadata("model").orElse("default"))
+                .ifPresent(cir::setReturnValue);
     }
 
     @Inject(method = "loadPlayerTextures",
