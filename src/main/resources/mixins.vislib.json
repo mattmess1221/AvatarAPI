@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "minVersion": "0.7.10",
+    "package": "com.minelittlepony.vislib.core.mixin",
+    "refmap": "mixins.vislib.refmap.json",
+    "target": "@env(DEFAULT)",
+    "compatibilityLevel": "JAVA_8",
+    "client": [
+        "MixinImageBufferDownload",
+        "MixinNetworkPlayerInfo",
+        "MixinRenderManager"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
