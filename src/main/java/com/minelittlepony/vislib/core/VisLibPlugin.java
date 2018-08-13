@@ -1,15 +1,19 @@
 package com.minelittlepony.vislib.core;
 
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
+import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion;
+import org.spongepowered.asm.launch.MixinBootstrap;
 import org.spongepowered.asm.mixin.Mixins;
 
 import java.util.Map;
 
 import javax.annotation.Nullable;
 
+@MCVersion("1.12.2")
 public class VisLibPlugin implements IFMLLoadingPlugin {
 
     public VisLibPlugin() {
+        MixinBootstrap.init();
         Mixins.addConfiguration("mixins.vislib.json");
     }
 
@@ -20,7 +24,7 @@ public class VisLibPlugin implements IFMLLoadingPlugin {
 
     @Override
     public String getModContainerClass() {
-        return null;
+        return "com.minelittlepony.vislib.core.VisLibContainer";
     }
 
     @Nullable

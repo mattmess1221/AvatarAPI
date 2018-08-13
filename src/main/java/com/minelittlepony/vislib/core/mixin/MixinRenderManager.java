@@ -23,7 +23,7 @@ public abstract class MixinRenderManager {
 
     @Final @Shadow private Map<String, RenderPlayer> skinMap;
 
-    @Inject(method = "<init>", at = @At("TAIL"))
+    @Inject(method = "<init>", at = @At("RETURN"))
     private void postInit(TextureManager renderEngineIn, RenderItem itemRendererIn, CallbackInfo ci) {
         ServiceManager.get(RenderService.class).ifPresent(s -> s.loadPlayerRenders((RenderManager) (Object) this, skinMap));
     }

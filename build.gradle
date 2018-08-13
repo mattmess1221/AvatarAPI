@@ -21,6 +21,8 @@ minecraft {
     version = project.forgeVersion
     runDir = "run"
 
+    clientJvmArgs += '-Dfml.coreMods.load=com.minelittlepony.vislib.core.VislibPlugin'
+
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
     // stable_#            stables are built at the discretion of the MCP team.
@@ -32,7 +34,7 @@ minecraft {
 
 sourceSets {
     main {
-        refMap = 'mixins.vislib.refmap.json'
+        ext.refMap = 'mixins.vislib.refmap.json'
     }
 }
 configurations {
@@ -56,7 +58,9 @@ repositories {
 
 dependencies {
 
-    compile 'org.spongepowered:mixin:0.7.11-SNAPSHOT'
+    compile('org.spongepowered:mixin:0.7.11-SNAPSHOT') {
+        transitive = false
+    }
 }
 
 processResources {
