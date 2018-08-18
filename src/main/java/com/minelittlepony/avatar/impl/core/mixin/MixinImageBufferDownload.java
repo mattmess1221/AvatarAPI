@@ -1,6 +1,6 @@
-package com.minelittlepony.vislib.core.mixin;
+package com.minelittlepony.avatar.impl.core.mixin;
 
-import com.minelittlepony.vislib.event.TextureLoadEvent;
+import com.minelittlepony.avatar.event.TextureLoadEvent;
 import net.minecraft.client.renderer.ImageBufferDownload;
 import net.minecraftforge.common.MinecraftForge;
 import org.spongepowered.asm.mixin.Mixin;

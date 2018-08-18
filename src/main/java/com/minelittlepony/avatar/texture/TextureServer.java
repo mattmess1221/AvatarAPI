@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib.texture;
+package com.minelittlepony.avatar.texture;
 
 import com.mojang.authlib.GameProfile;
 import net.minecraft.util.Session;

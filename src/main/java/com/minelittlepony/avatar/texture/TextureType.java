@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib.texture;
+package com.minelittlepony.avatar.texture;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;

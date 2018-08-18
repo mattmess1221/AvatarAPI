@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib;
+package com.minelittlepony.avatar;
 
 public class DuplicateServiceException extends RuntimeException {
 

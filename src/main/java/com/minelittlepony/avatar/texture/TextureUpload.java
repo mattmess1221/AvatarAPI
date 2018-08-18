@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib.texture;
+package com.minelittlepony.avatar.texture;
 
 import java.net.URI;
 import java.util.Map;

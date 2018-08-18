@@ -1,7 +1,7 @@
 [
     {
-        "modid": "VisLib",
-        "name": "VisLib",
+        "modid": "avatarapi",
+        "name": "AvatarAPI",
         "description": "Core api mod for interacting and changing how the player is rendered.",
         "version": "${version}",
         "mcversion": "${mcversion}",

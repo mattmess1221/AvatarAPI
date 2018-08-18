@@ -1,7 +1,7 @@
-package com.minelittlepony.vislib.core.mixin;
+package com.minelittlepony.avatar.impl.core.mixin;
 
-import com.minelittlepony.vislib.ServiceManager;
-import com.minelittlepony.vislib.render.RenderService;
+import com.minelittlepony.avatar.ServiceManager;
+import com.minelittlepony.avatar.render.RenderService;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;

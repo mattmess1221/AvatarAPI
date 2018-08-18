@@ -21,7 +21,7 @@ minecraft {
     version = project.forgeVersion
     runDir = "run"
 
-    clientJvmArgs += '-Dfml.coreMods.load=com.minelittlepony.vislib.core.VislibPlugin'
+    clientJvmArgs += '-Dfml.coreMods.load=com.minelittlepony.avatar.core.AvatarPlugin'
 
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
@@ -34,11 +34,10 @@ minecraft {
 
 sourceSets {
     main {
-        ext.refMap = 'mixins.vislib.refmap.json'
+        ext.refMap = 'mixins.avatar.refmap.json'
     }
 }
 configurations {
-    coreCompile.transitive = false
 
     forgeGradleMcDeps {
         exclude group: 'org.scala-lang'

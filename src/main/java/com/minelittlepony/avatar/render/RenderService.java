@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib.render;
+package com.minelittlepony.avatar.render;
 
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;

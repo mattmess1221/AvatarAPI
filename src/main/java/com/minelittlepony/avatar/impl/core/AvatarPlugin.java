@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib.core;
+package com.minelittlepony.avatar.impl.core;
 
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.MCVersion;
@@ -10,11 +10,11 @@ import java.util.Map;
 import javax.annotation.Nullable;
 
 @MCVersion("1.12.2")
-public class VisLibPlugin implements IFMLLoadingPlugin {
+public class AvatarPlugin implements IFMLLoadingPlugin {
 
-    public VisLibPlugin() {
+    public AvatarPlugin() {
         MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.vislib.json");
+        Mixins.addConfiguration("mixins.avatar.json");
     }
 
     @Override
@@ -24,7 +24,7 @@ public class VisLibPlugin implements IFMLLoadingPlugin {
 
     @Override
     public String getModContainerClass() {
-        return "com.minelittlepony.vislib.core.VisLibContainer";
+        return "com.minelittlepony.avatar.impl.AvatarContainer";
     }
 
     @Nullable

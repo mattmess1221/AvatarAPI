@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib.texture;
+package com.minelittlepony.avatar.texture;
 
 import org.apache.commons.io.FilenameUtils;
 

@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib.event;
+package com.minelittlepony.avatar.event;
 
 import net.minecraftforge.fml.common.eventhandler.Event;
 

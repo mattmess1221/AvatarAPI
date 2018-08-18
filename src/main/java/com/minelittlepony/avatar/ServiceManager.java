@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib;
+package com.minelittlepony.avatar;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package com.minelittlepony.vislib.texture;
+package com.minelittlepony.avatar.texture;
 
-import com.minelittlepony.vislib.core.INetworkPlayerInfo;
+import com.minelittlepony.avatar.impl.INetworkPlayerInfo;
 import com.mojang.authlib.GameProfile;
 import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.util.ResourceLocation;

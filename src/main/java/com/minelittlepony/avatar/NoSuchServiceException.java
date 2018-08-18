@@ -1,4 +1,4 @@
-package com.minelittlepony.vislib;
+package com.minelittlepony.avatar;
 
 public class NoSuchServiceException extends RuntimeException {
 
