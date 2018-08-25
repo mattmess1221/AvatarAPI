@@ -2,15 +2,20 @@ package com.minelittlepony.avatar.texture;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
+import java.io.IOException;
 import java.util.Locale;
+import java.util.Set;
 
 public final class TextureType {
 
-    private static final HashMap<String, TextureType> textures = new LinkedHashMap<>();
+    private static final BiMap<String, TextureType> textures = HashBiMap.create(3);
 
     // Vanilla texture types
 
@@ -27,6 +32,10 @@ public final class TextureType {
     public static TextureType from(MinecraftProfileTexture.Type type) {
         Preconditions.checkNotNull(type);
         return of(type.name());
+    }
+
+    public static Set<TextureType> values() {
+        return textures.values();
     }
 
     private final String name;
@@ -57,5 +66,19 @@ public final class TextureType {
     @Override
     public String toString() {
         return name;
+    }
+
+
+    public static class Serializer extends TypeAdapter<TextureType> {
+
+        @Override
+        public void write(JsonWriter out, TextureType value) throws IOException {
+            out.value(value.toString());
+        }
+
+        @Override
+        public TextureType read(JsonReader in) throws IOException {
+            return TextureType.of(in.nextString());
+        }
     }
 }

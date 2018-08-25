@@ -8,7 +8,8 @@
     "client": [
         "MixinImageBufferDownload",
         "MixinNetworkPlayerInfo",
-        "MixinRenderManager"
+        "MixinRenderManager",
+        "MixinTileEntitySkullRenderer"
     ],
     "injectors": {
         "defaultRequire": 1

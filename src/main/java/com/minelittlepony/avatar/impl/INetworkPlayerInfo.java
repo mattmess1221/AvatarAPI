@@ -8,4 +8,6 @@ import java.util.Optional;
 public interface INetworkPlayerInfo {
 
     Optional<TextureData> getPlayerTexture(TextureType type);
+
+    void deleteTextures();
 }

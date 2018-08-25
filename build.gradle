@@ -5,13 +5,20 @@ buildscript {
             name = "forge"
             url = "https://files.minecraftforge.net/maven"
         }
+        maven {
+            name = 'sponge'
+            url = 'https://repo.spongepowered.org/maven'
+        }
     }
     dependencies {
         classpath "net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT"
+        classpath 'org.spongepowered:mixingradle:0.6-SNAPSHOT'
     }
 }
 
 apply plugin: "net.minecraftforge.gradle.forge"
+apply plugin: 'org.spongepowered.mixin'
+apply plugin: "maven"
 
 version = modVersion
 group = modGroup
@@ -85,6 +92,6 @@ jar {
     manifest.attributes(
             TweakClass: 'org.spongepowered.asm.launch.MixinTweaker',
             FMLCorePlugin: 'com.minelittlepony.vislib.core.VisLibPlugin',
-            MixinConfigs: 'mixins.vislib.json'
+            MixinConfigs: 'mixins.avatar.json'
     )
 }
